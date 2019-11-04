@@ -1,0 +1,5 @@
+# database
+database/mongo-volume
+
+# modules
+node_modules/
