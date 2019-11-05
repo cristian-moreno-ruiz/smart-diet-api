@@ -1,5 +1,6 @@
 const express = require('express');
 const parser = require('body-parser');
+const cors = require('cors');
 
 const Database = require('./models/database');
 const routes = require('./routes');
@@ -10,6 +11,7 @@ new Database(dbUrl)
 const server = express();
 const port = 3000;
 server.use(parser.json());
+server.use(cors());
 server.use(routes);
 
 // Start Server

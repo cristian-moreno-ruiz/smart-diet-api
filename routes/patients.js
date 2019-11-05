@@ -3,6 +3,7 @@ const Patient = require('../models/patient');
 const getAll = async (req, res) => {
 	console.log('Getting all patients');
 	const patients = await Patient.find({});
+	//return res.send('hola');
 	return res.send(patients);
 };
 
@@ -31,4 +32,5 @@ const post = (req, res) => {
 module.exports = {
 	get,
 	post,
+	getAll,
 };
