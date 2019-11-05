@@ -6,7 +6,7 @@ class Database {
     }
 
     _connect(url) {
-        mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
+        mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
         .then(() => {console.log('Connected successfully to ', url)})
         .catch((error) => {console.error('Database connection error: ', error)})
     }
