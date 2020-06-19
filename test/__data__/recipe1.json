@@ -1,0 +1,35 @@
+{
+	"name": "Pasta con Carne Molida",
+	"composition": [
+		{
+			"name": "pasta cocida (cocinar sin aceite)",
+			"quantity": 0.5,
+			"unit": "taza",
+			"type": "CARB"
+		},
+		{
+			"name": "carne molida 95% magra",
+			"quantity": 30,
+			"unit": "g",
+			"type": "LOW-FAT-MEAT"
+		},
+		{
+			"name": "aceite para cocinar la carne",
+			"quantity": 1,
+			"unit": "cucharadita",
+			"type": "FAT"
+		},
+		{
+			"name": "salsa de tomate PASTA ROMA envase de vidrio (SIN AZÚCAR)",
+			"quantity": 62.5,
+			"unit": "ml",
+			"type": "VEG"
+		},
+		{
+			"name": "ensalada verde (lechugas, tomate, pepino, zanahoria) aderezar con limón, sal y vinagre de manzana (SIN ACEITE)",
+			"quantity": 0.5,
+			"unit": "taza",
+			"type": "VEG"
+		}
+	]
+}

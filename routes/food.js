@@ -7,13 +7,10 @@ const get = (req, res) => {
 
 const post = (req, res) => {
 	console.log(req.body);
-	let food = new Food(req.body);
+	const food = new Food(req.body);
 	food.save();
-
-
-
 	res.send(req.body);
-}
+};
 
 module.exports = {
 	get,
