@@ -3,3 +3,6 @@ database/mongo-volume
 
 # modules
 node_modules/
+
+# lambda
+lambda.zip

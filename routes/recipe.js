@@ -2,8 +2,13 @@ const Recipe = require('../models/recipe');
 const { tuneRecipe, printRecipe } = require('../helpers');
 
 const list = async (req, res) => {
-	const recipes = await Recipe.find();
-	res.send(recipes);
+	try {
+		const recipes = await Recipe.find();
+		res.send(recipes);
+	} catch (e) {
+		res.json(e);
+		console.log(e);
+	}
 };
 
 const get = async (req, res) => {
@@ -27,12 +32,18 @@ const get = async (req, res) => {
 
 const create = async (req, res) => {
 	try {
+		const { _id } = req.params;
 		const { body } = req;
+		if (_id) {
+			await Recipe.updateOne({ _id }, body);
+			return res.send('Recipe updated successfully');
+		}
 		const recipe = new Recipe(body);
 		await recipe.save();
-		res.send('Recipe saved successfully');
+		return res.send('Recipe created successfully');
 	} catch (err) {
-		res.status(500).send({ error: err });
+		console.log(err);
+		return res.status(500).send({ error: err });
 	}
 };
 
