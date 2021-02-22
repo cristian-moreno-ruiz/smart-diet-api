@@ -15,7 +15,10 @@ const component = {
 };
 // Schema
 const recipeSchema = new mongoose.Schema({
-	name: String,
+	name: {
+		type: String,
+		unique: true,
+	},
 	composition: [component],
 });
 
